@@ -1,14 +1,3 @@
-#get midi file and a table of midi instrument to MM instrument
-import dataclasses
-import enum
-#notecontraption: the contraption that plays the same note multiple times
-@dataclasses.dataclass(slots = True)
-class MM_notecontraption:
-    note: int
-    instrument: int
-
-with open("music.mid") as input_midi_file:
-    pass
 playing_CEtemplate = {
     "Behavior" : 0,
     "CanPlayerStandOn" : True,
@@ -40,6 +29,3 @@ end_CEtemplate = {
     "ID" : "end",
     "PixelArtID" : "b"
 }
-lengths = [(),(),()]
-onenote_rslt = []
-onenote_rslt.append(not_playing_CEtemplate.copy())

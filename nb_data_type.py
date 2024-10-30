@@ -6,6 +6,5 @@ class EnemyId(enum.Enum):
     pass
 @dataclasses.dataclass(slots = True)
 class MM_notecontraption:
-    pitch: int
+    note: int
     instrument: int
-    rhythm: list[int]
