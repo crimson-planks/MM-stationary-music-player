@@ -54,8 +54,16 @@ end_CEtemplate = {
 lengths = [(),(),()]
 onenote_rslt = [end_CEtemplate.copy()]
 
-def get_normalized_note_length_list(note_length_list: list[int]):
-    pass
+def note_time_list_to_note_length_list(note_time_list: list[int]):
+    note_length_list: list[int]=[]
+    start_frame = note_time_list[0]
+    for i,curr_note_time in enumerate(note_time_list):
+        if i==0:
+            continue
+        note_length_list.append(curr_note_time-note_time_list[i-1])
+    return start_frame,note_length_list
+
+
 def get_rhythm_CEtemplate_list(start_frame: int, note_length_list: list[int], prefix: str):
     result = []
     first_np = not_playing_CEtemplate.copy()
@@ -78,7 +86,9 @@ def get_rhythm_CEtemplate_list(start_frame: int, note_length_list: list[int], pr
         np["TransformConditionValue"] = note_length-PLAYING_CE_DURATION
         result.append(np)
     return result
-with open("MM_noteblock/result.json","w") as result_file:
-    onenote_rslt.extend(get_rhythm_CEtemplate_list(20,[60,60,60,60,60,60],""))
-    json.dump(onenote_rslt,result_file,indent=4)
+
+if __name__=='__main__':
+    with open("./result.json","w") as result_file:
+        onenote_rslt.extend(get_rhythm_CEtemplate_list(20,[60,60,60,60,60,60],""))
+        json.dump(onenote_rslt,result_file,indent=4)
 #man I just want to play Bad Apple but I have to code
