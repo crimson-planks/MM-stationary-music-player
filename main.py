@@ -5,12 +5,18 @@
 import dataclasses
 import enum
 import json
+from split import split_notes_to_lists
+
 #notecontraption: the contraption that plays the same note multiple times
 @dataclasses.dataclass(slots = True)
 class MM_notecontraption:
     note: int
     instrument: int
     rhythm: list[int]
+    def split_notes(self):
+        return [MM_notecontraption(self.note,self.instrument,note_time_list) for note_time_list in split_notes_to_lists(self.rhythm,60)]
+    def get_CE_prefix(self):
+        return str(self.note).rjust(2,'0')+hex(self.instrument)[2:].rjust(2,'0')+'_'
 @dataclasses.dataclass(slots = True)
 class Song:
     pass
@@ -61,6 +67,7 @@ def note_time_list_to_note_length_list(note_time_list: list[int]):
         if i==0:
             continue
         note_length_list.append(curr_note_time-note_time_list[i-1])
+    note_length_list.append(PLAYING_CE_DURATION)
     return start_frame,note_length_list
 
 
@@ -86,9 +93,17 @@ def get_rhythm_CEtemplate_list(start_frame: int, note_length_list: list[int], pr
         np["TransformConditionValue"] = note_length-PLAYING_CE_DURATION
         result.append(np)
     return result
-
-if __name__=='__main__':
+if __name__==None:
+    print(note_time_list_to_note_length_list([0,60]))
+if __name__== '__main__':
+    input_list=[MM_notecontraption(0,1,[0,15,30,60,105])]
+    note_time_lists: list[MM_notecontraption]=[]
+    for note_time_list in input_list:
+        note_time_lists.extend(note_time_list.split_notes())
+    print(note_time_lists)
+    for i,note_time_list in enumerate(note_time_lists):
+        start_frame,note_length_list=note_time_list_to_note_length_list(note_time_list.rhythm)
+        onenote_rslt.extend(get_rhythm_CEtemplate_list(start_frame,note_length_list,note_time_list.get_CE_prefix()+hex(i)[2:]))
     with open("./result.json","w") as result_file:
-        onenote_rslt.extend(get_rhythm_CEtemplate_list(20,[60,60,60,60,60,60],""))
         json.dump(onenote_rslt,result_file,indent=4)
 #man I just want to play Bad Apple but I have to code

@@ -14,139 +14,115 @@
         "CanPlayerStandOn": true,
         "HitBoxHeight": 16,
         "HitBoxWidth": 48,
-        "ID": "np_pre",
+        "ID": "0001_0np_pre",
         "PixelArtID": "0",
         "TransformCondition": 2,
-        "TransformConditionValue": 20,
+        "TransformConditionValue": 0,
         "TransformDelay": 0,
-        "TransformID": "p0"
+        "TransformID": "0001_0p0"
     },
     {
         "Behavior": 0,
         "CanPlayerStandOn": true,
         "HitBoxHeight": 16,
         "HitBoxWidth": 16,
-        "ID": "p0",
+        "ID": "0001_0p0",
         "PixelArtID": "1",
         "TransformCondition": 2,
         "TransformConditionValue": 7,
         "TransformDelay": 0,
-        "TransformID": "np0"
+        "TransformID": "0001_0np0"
     },
     {
         "Behavior": 0,
         "CanPlayerStandOn": true,
         "HitBoxHeight": 16,
         "HitBoxWidth": 48,
-        "ID": "np0",
+        "ID": "0001_0np0",
         "PixelArtID": "0",
         "TransformCondition": 2,
         "TransformConditionValue": 53,
         "TransformDelay": 0,
-        "TransformID": "p1"
+        "TransformID": "0001_0p1"
     },
     {
         "Behavior": 0,
         "CanPlayerStandOn": true,
         "HitBoxHeight": 16,
         "HitBoxWidth": 16,
-        "ID": "p1",
+        "ID": "0001_0p1",
         "PixelArtID": "1",
         "TransformCondition": 2,
         "TransformConditionValue": 7,
         "TransformDelay": 0,
-        "TransformID": "np1"
+        "TransformID": "end"
     },
     {
         "Behavior": 0,
         "CanPlayerStandOn": true,
         "HitBoxHeight": 16,
         "HitBoxWidth": 48,
-        "ID": "np1",
+        "ID": "0001_1np_pre",
         "PixelArtID": "0",
         "TransformCondition": 2,
-        "TransformConditionValue": 53,
+        "TransformConditionValue": 15,
         "TransformDelay": 0,
-        "TransformID": "p2"
+        "TransformID": "0001_1p0"
     },
     {
         "Behavior": 0,
         "CanPlayerStandOn": true,
         "HitBoxHeight": 16,
         "HitBoxWidth": 16,
-        "ID": "p2",
+        "ID": "0001_1p0",
         "PixelArtID": "1",
         "TransformCondition": 2,
         "TransformConditionValue": 7,
         "TransformDelay": 0,
-        "TransformID": "np2"
+        "TransformID": "0001_1np0"
     },
     {
         "Behavior": 0,
         "CanPlayerStandOn": true,
         "HitBoxHeight": 16,
         "HitBoxWidth": 48,
-        "ID": "np2",
+        "ID": "0001_1np0",
         "PixelArtID": "0",
         "TransformCondition": 2,
-        "TransformConditionValue": 53,
+        "TransformConditionValue": 83,
         "TransformDelay": 0,
-        "TransformID": "p3"
+        "TransformID": "0001_1p1"
     },
     {
         "Behavior": 0,
         "CanPlayerStandOn": true,
         "HitBoxHeight": 16,
         "HitBoxWidth": 16,
-        "ID": "p3",
+        "ID": "0001_1p1",
         "PixelArtID": "1",
         "TransformCondition": 2,
         "TransformConditionValue": 7,
         "TransformDelay": 0,
-        "TransformID": "np3"
+        "TransformID": "end"
     },
     {
         "Behavior": 0,
         "CanPlayerStandOn": true,
         "HitBoxHeight": 16,
         "HitBoxWidth": 48,
-        "ID": "np3",
+        "ID": "0001_2np_pre",
         "PixelArtID": "0",
         "TransformCondition": 2,
-        "TransformConditionValue": 53,
+        "TransformConditionValue": 30,
         "TransformDelay": 0,
-        "TransformID": "p4"
+        "TransformID": "0001_2p0"
     },
     {
         "Behavior": 0,
         "CanPlayerStandOn": true,
         "HitBoxHeight": 16,
         "HitBoxWidth": 16,
-        "ID": "p4",
-        "PixelArtID": "1",
-        "TransformCondition": 2,
-        "TransformConditionValue": 7,
-        "TransformDelay": 0,
-        "TransformID": "np4"
-    },
-    {
-        "Behavior": 0,
-        "CanPlayerStandOn": true,
-        "HitBoxHeight": 16,
-        "HitBoxWidth": 48,
-        "ID": "np4",
-        "PixelArtID": "0",
-        "TransformCondition": 2,
-        "TransformConditionValue": 53,
-        "TransformDelay": 0,
-        "TransformID": "p5"
-    },
-    {
-        "Behavior": 0,
-        "CanPlayerStandOn": true,
-        "HitBoxHeight": 16,
-        "HitBoxWidth": 16,
-        "ID": "p5",
+        "ID": "0001_2p0",
         "PixelArtID": "1",
         "TransformCondition": 2,
         "TransformConditionValue": 7,
